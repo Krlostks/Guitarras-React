@@ -45,8 +45,12 @@ function App() {
           guitarra.cantidad--;
         }
       });
-  
+
+      
       setCarrito(carritoActual.filter((guitarra) => guitarra.cantidad !== 0));
+    }
+    function vaciarCarrito() {
+      setCarrito([]);
     }
   return (
     <>
@@ -54,6 +58,8 @@ function App() {
     carrito={carrito}
     agregarCarrito ={agregarCarrito}
     restarCarrito = {restarCarrito}
+    vaciarCarrito = {vaciarCarrito}
+    guitarra = {guitarras[3]}
     total = {total}
      />
     <main className="container-xl mt-5">
